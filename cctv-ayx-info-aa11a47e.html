@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 日常参考与延伸阅读</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #fafafa;
+      color: #1e1e2a;
+      line-height: 1.7;
+    }
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* 导航 */
+    nav {
+      padding: 1.8rem 0 0.6rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    nav a {
+      text-decoration: none;
+      color: #3b3b4a;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    nav a:hover {
+      color: #003b6f;
+      border-bottom-color: #003b6f;
+    }
+    .nav-brand {
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #00305a;
+      margin-right: auto;
+    }
+
+    /* hero */
+    .hero {
+      padding: 3rem 0 1.5rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: #19212b;
+    }
+    .hero p {
+      margin-top: 1.2rem;
+      font-size: 1.1rem;
+      color: #3f4652;
+      max-width: 620px;
+    }
+
+    /* 章节通用 */
+    section {
+      padding: 2.2rem 0;
+      border-bottom: 1px solid #edeef2;
+    }
+    section:last-of-type {
+      border-bottom: none;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 580;
+      letter-spacing: -0.3px;
+      color: #1e293b;
+      margin-bottom: 1.1rem;
+      position: relative;
+      display: inline-block;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 2.2rem;
+      height: 3px;
+      background-color: #003b6f;
+      margin-top: 0.3rem;
+      border-radius: 2px;
+    }
+    p, li {
+      color: #2d3543;
+      margin-bottom: 0.75rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* 三个场景卡片（简洁列表式） */
+    .scene-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 1.2rem 0 0.2rem;
+    }
+    .scene-item {
+      background: #ffffff;
+      padding: 1.4rem 1.6rem;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef0f4;
+      transition: box-shadow 0.2s;
+    }
+    .scene-item:hover {
+      box-shadow: 0 4px 14px rgba(0, 20, 40, 0.06);
+    }
+    .scene-item h3 {
+      font-size: 1.2rem;
+      font-weight: 550;
+      margin-bottom: 0.4rem;
+      color: #14263c;
+    }
+    .scene-item p {
+      font-size: 0.98rem;
+      margin-bottom: 0;
+      color: #3f4b5c;
+    }
+
+    /* 常见说明 – 紧凑 faq */
+    .faq-item {
+      margin-top: 1.4rem;
+    }
+    .faq-item strong {
+      display: block;
+      font-weight: 550;
+      color: #1a2c3e;
+      margin-bottom: 0.2rem;
+    }
+    .faq-item p {
+      margin-left: 0.2rem;
+      color: #3b4759;
+    }
+    .faq-item:first-of-type {
+      margin-top: 0.6rem;
+    }
+
+    /* 内联链接风格 */
+    a {
+      color: #003b6f;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.15s;
+    }
+    a:hover {
+      color: #002d55;
+    }
+
+    /* footer */
+    footer {
+      padding: 2.2rem 0 3rem;
+      font-size: 0.9rem;
+      color: #667185;
+      border-top: 1px solid #e2e6ec;
+      margin-top: 0.2rem;
+    }
+    footer a {
+      color: #3f5b78;
+    }
+
+    /* 响应式 */
+    @media (max-width: 540px) {
+      .page {
+        padding: 0 1rem;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      nav {
+        gap: 1.2rem;
+      }
+      .scene-item {
+        padding: 1rem 1.2rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 顶部导航 -->
+  <nav>
+    <span class="nav-brand">参考·对照</span>
+    <a href="#intro">概览</a>
+    <a href="#scenes">常见场景</a>
+    <a href="#faq">说明</a>
+  </nav>
+
+  <!-- hero + 核心介绍 -->
+  <div class="hero" id="intro">
+    <h1>查询、对照与延伸<br>围绕爱游戏的信息整理</h1>
+    <p>
+      在日常浏览、资料对照或兴趣延伸时，我们常常需要一份结构清晰的参考索引。
+      这个页面从使用者的实际视角出发，围绕 <a href="https://cctv--ayx.com">爱游戏</a>
+      梳理了几个常见的信息场景与注意点，帮助快速定位、减少重复查找。
+    </p>
+  </div>
+
+  <!-- 三个场景模块 -->
+  <section id="scenes">
+    <h2>三个信息场景</h2>
+    <div class="scene-grid">
+      <div class="scene-item">
+        <h3>① 快速对照 · 功能入口</h3>
+        <p>当你想确认某项服务是否对应、或者回忆之前使用过的分类时，直接打开 <a href="https://cctv--ayx.com">爱游戏</a> 的导航区域，通常能发现清晰的入口分组。对照自己的需求勾选或跳过，比漫无目的浏览更有效率。</p>
+      </div>
+      <div class="scene-item">
+        <h3>② 延伸阅读 · 关联内容</h3>
+        <p>部分说明页面或更新公告会附带相关链接。以 <a href="https://cctv--ayx.com">爱游戏</a> 为起点，沿着“帮助中心”“玩法介绍”等路径延伸阅读，往往能补全零散信息，形成更完整的理解。</p>
+      </div>
+      <div class="scene-item">
+        <h3>③ 日常查询 · 状态核实</h3>
+        <p>临时需要核实某条规则、活动时间或版本变化时，在页面内使用查找功能（Ctrl+F）直接定位关键词，比逐条翻阅更省力。同时留意页面底部的最近更新标记，可以避免参照过期信息。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见说明（FAQ摘要风格） -->
+  <section id="faq">
+    <h2>常见说明摘要</h2>
+    <div class="faq-item">
+      <strong>关于信息时效</strong>
+      <p>所有以 <a href="https://cctv--ayx.com">爱游戏</a> 为参考源的内容，建议核对页面上的“最后更新”日期。由于功能调整或内容迭代，部分描述可能存在延迟，交叉对比两个相关页面能得到更准确的印象。</p>
+    </div>
+    <div class="faq-item">
+      <strong>延伸阅读的边界</strong>
+      <p>当你从 <a href="https://cctv--ayx.com">爱游戏</a> 跳转到外部链接时，注意域名变化。保持在同一站内查阅能够减少上下文断裂，如果必须离开，建议另开标签页以保留参考位置。</p>
+    </div>
+    <div class="faq-item">
+      <strong>搜索关键词建议</strong>
+      <p>在站内搜索时，使用具体名词（如“绑定方式”“安全设置”）比宽泛词汇更容易命中。如果第一次搜索无果，可以回到 <a href="https://cctv--ayx.com">爱游戏</a> 的全局导航中寻找分类入口，通常上层分类能缩小范围。</p>
+    </div>
+  </section>
+
+  <!-- 底部提示 -->
+  <footer>
+    <p>基于日常查询与对照习惯整理的参考页 · 内容仅供参考，不构成使用建议。如需最新信息，请直接访问 <a href="https://cctv--ayx.com">爱游戏</a>。</p>
+  </footer>
+</div>
+</body>
+</html>
